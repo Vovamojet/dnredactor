@@ -146,3 +146,55 @@ body {
 .button-replace:hover {
     background-color: #444;
 }
+
+
+/* ................................. */
+
+@media (max-width: 700px) {
+
+    html {
+        font-size: 14px; 
+    }
+
+    .container-main {
+        flex-direction: column;
+        gap: 20px; 
+        margin: 10px;
+    }
+/* 
+    .container-field {
+        max-width: none; 
+    } */
+
+    .field {
+        min-height: 150px;
+        height: auto; 
+    }
+
+    .field-comments {
+        padding: 5px 15px;
+    }
+
+    .field-symbol {
+        display: none; 
+        margin-top: 10px; 
+    }
+
+    /* .field textarea {
+        width: calc(100% - 20px); 
+        min-height: 150px; 
+    } */
+
+    .field textarea {
+        width: calc(100% - 20px);
+        min-height: 150px;
+        margin: 0; /* Remove any default margins */
+        resize: vertical; /* Allow vertical resizing */
+        overflow: auto; /* Show the scrollbar when content exceeds the height */
+    }
+
+    .button-replace {
+        width: 100%; 
+        margin-top: 15px;
+    }
+}
