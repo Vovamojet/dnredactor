@@ -20,6 +20,8 @@ const buttonOriginListClear = document.getElementById('buttonOriginListClear');
 const buttonAddListClear = document.getElementById('buttonAddListClear');
 const buttonDelinListClear = document.getElementById('buttonDelListCrear');
 const buttonResultListCrear = document.getElementById('buttonResultListCrear');
+const buttonReplace = document.getElementById('buttonReplace');
+
 
 let listArray = [];
 
@@ -60,19 +62,16 @@ function arrayHasDuplicates(inputList, field) {
     const listOfDuplicates = result.join(", ");
 
     if (listOfDuplicates) {
-        field.innerHTML = ('В списке обнаружены дублирующиеся числа: ' + listOfDuplicates + ';');
+        field.innerHTML = ('Обнаружены дубликаты: ' + listOfDuplicates + ';');
         field.style.color = 'red';
     } else {
-        field.innerHTML = ('Дублирующихся чисел в списке не обнаружено;<br>');
+        field.innerHTML = ('Дубликатов не обнаружено;<br>');
         field.style.color = '#45a039';
     }
 }
 
 //Если обнаружен некорректный символ - пробел, то об это не узнать
-//Дублирующихся чисел в списке не обнаружено; что за фраза, пиздец, надо попроще написать
-//можно убрать заголовки из текстареа и сделать сверху
 //сделать кнопку - заменить переносы строк на запятые
-//одинаковых значений не обнаружено
 
 function createNewList() {
     const originArray = (originListInput.value).split('\n')
@@ -130,6 +129,10 @@ function counter(listInput, text) {
     text.innerHTML = ('Кол-во строк: ' + listArray.length);
 };
 
+function replaceNewlinesWithCommas() {
+    const listWithCommas = textResult.value.replace(/\n/g, ",");
+    textResult.value = listWithCommas;
+}
 
 originListInput.focus();
 
@@ -190,3 +193,5 @@ buttonResultListCrear.addEventListener('click', function() {
     textResult.value ='';
     textCounterResult.innerHTML = ('Кол-во строк: 0');
 });
+
+buttonReplace.addEventListener('click', replaceNewlinesWithCommas);

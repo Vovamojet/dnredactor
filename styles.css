@@ -32,7 +32,12 @@ body {
     display: flex;
     justify-content: space-around;
     gap: 10px;
-    margin: 30px 20px;
+    margin: 20px 20px;
+}
+
+.container-title {
+    text-align: center;
+    margin-bottom: 5px;
 }
 
 .container-field {
@@ -66,10 +71,6 @@ body {
     box-sizing: border-box;
 }
 
-.field textarea::placeholder {
-    color: #aaaaaa; /* Цвет placeholder */
-}
-
 .field-comments {
     background-color: #333;
     border-top: 1px solid #555;
@@ -86,16 +87,17 @@ body {
 
 .result-button {
     font-size: 30px;
-    background-color: #4CAF50; 
+    background-color: #3c8a32; 
     color: #fff;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 .result-button:hover {
-    background-color: #45a039;
+    background-color: #4CAF50;
 }
 
 .field-button {
@@ -127,4 +129,20 @@ body {
 .text-result {
     text-align: left;
     margin-left: 15px;
+}
+
+.button-replace {
+    width: 140px;
+    background-color: #333;
+    color: #b8b8b8;
+    cursor: pointer;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.button-replace:hover {
+    background-color: #444;
 }

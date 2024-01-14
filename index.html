@@ -11,16 +11,17 @@
     <div class="container-main">
 
         <div class="container-field">
+            <div class="container-title">Список DN из SmartLogger:</div>
             <div class="field">
-                <textarea class="text-input" id="originListInput" placeholder="Список DN из SmartLogger"></textarea>
+                <textarea class="text-input" id="originListInput" placeholder="Скопируйте начальный список в это поле"></textarea>
             </div>
             <div class="field-button">
                 <p id="text-counter-origin">Кол-во строк: 0</p>
                 <button class="button-clear" id="buttonOriginListClear">очистить</button>
             </div>
             <div class="field-comments">
-                <p id="text-comment-origin-wrongsymbols">Некорректных символов в списке не обнаружено;</p>
-                <p id="text-comment-origin-duplicates">Дублирующихся чисел в списке не обнаружено;</p>
+                <p id="text-comment-origin-wrongsymbols">Некорректных символов не обнаружено;</p>
+                <p id="text-comment-origin-duplicates">Дубликатов не обнаружено;</p>
             </div>
         </div>
 
@@ -29,16 +30,17 @@
         </div>
 
         <div class="container-field">
+            <div class="container-title">Список добавляемых DN:</div>
             <div class="field">
-                <textarea class="text-input" id="addListInput" placeholder="Список добавляемых DN"></textarea>
+                <textarea class="text-input" id="addListInput" placeholder="..."></textarea>
             </div>
             <div class="field-button">
                 <p id="text-counter-add">Кол-во строк: 0</p>
                 <button class="button-clear" id="buttonAddListClear">очистить</button>
             </div>
             <div class="field-comments">
-                <p id="text-comment-add-wrongsymbols">Некорректных символов в списке не обнаружено;</p>
-                <p id="text-comment-add-duplicates">Дублирующихся чисел в списке не обнаружено;</p>
+                <p id="text-comment-add-wrongsymbols">Некорректных символов не обнаружено;</p>
+                <p id="text-comment-add-duplicates">Дубликатов не обнаружено;</p>
                 <p id="text-comment-add-compare">Совпадений с начальным списком не обнаружено;</p>
             </div>
         </div>
@@ -48,16 +50,17 @@
         </div>
 
         <div class="container-field">
+            <div class="container-title">Список удаляемых DN:</div>
             <div class="field">
-                <textarea class="text-input" id="delListInput" placeholder="Список удаляемых DN"></textarea>
+                <textarea class="text-input" id="delListInput" placeholder="..."></textarea>
             </div>
             <div class="field-button">
                 <p id="text-counter-del">Кол-во строк: 0</p>
                 <button class="button-clear" id="buttonDelListCrear">очистить</button>
             </div>
             <div class="field-comments">
-                <p id="text-comment-del-wrongsymbols">Некорректных символов в списке не обнаружено;</p>
-                <p id="text-comment-del-duplicates">Дублирующихся чисел в списке не обнаружено;</p>
+                <p id="text-comment-del-wrongsymbols">Некорректных символов не обнаружено;</p>
+                <p id="text-comment-del-duplicates">Дубликатов не обнаружено;</p>
                 <p id="text-comment-del-compare">Совпадений с добавляемым списком не обнаружено;</p>
             </div>
         </div>
@@ -67,8 +70,8 @@
             </div>
 
         <div class="container-field">
+            <div class="container-title">Итоговый список DN:</div>
             <div class="field">
-                <div class="field-result">Итоговый список DN:</div>
                 <textarea class="text-result" id="textResult"></textarea>
             </div>
             <div class="field-button">
@@ -76,6 +79,7 @@
                 <!-- <button class="button-copy" id="buttonCopyToBuffer">копировать</button> -->
                 <button class="button-clear" id="buttonResultListCrear">очистить</button>
             </div>
+                <button class="button-replace" id="buttonReplace">Заменить переносы строк на запятые</button>
         </div>
     
     </div>
