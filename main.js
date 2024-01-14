@@ -74,15 +74,18 @@ function arrayHasDuplicates(inputList, field) {
 //сделать кнопку - заменить переносы строк на запятые
 
 function createNewList() {
-    const originArray = (originListInput.value).split('\n')
+    const originArray = (originListInput.value).split('\n');
     const addArray = (addListInput.value).split('\n');
     const delArray = (delListInput.value).split('\n');
+
     const arrayWithAdded = originArray.concat(addArray);
     const resultArray = arrayWithAdded.filter(item => !delArray.includes(item));
-    const newList = resultArray.sort().join('\n');
+
+    const newList = resultArray.sort((a, b) => a - b).join('\n'); // сравнение типа число
     textResult.value = newList;
-    counter(newList, textCounterResult)
-};
+    counter(newList, textCounterResult);
+}
+
 
 function compareOrignWithAdd() {
     const originArray = (originListInput.value).split('\n');
@@ -134,6 +137,7 @@ function replaceNewlinesWithCommas() {
     textResult.value = listWithCommas;
 }
 
+
 originListInput.focus();
 
 originListInput.addEventListener('input', function() {
@@ -180,15 +184,34 @@ resultButton.addEventListener('click', createNewList);
 buttonOriginListClear.addEventListener('click', function() {
     originListInput.value ='';
     counter(originListInput.value, textCounterOrigin);
+    textCommentOriginWrongSymbols.innerHTML = ('Некорректных символов в списке не обнаружено;');
+    textCommentOriginWrongSymbols.style.color = '#45a039';
+    textCommentOriginDuplicates.innerHTML = ('Дубликатов не обнаружено;<br>');
+    textCommentOriginDuplicates.style.color = '#45a039';
 });
+
 buttonAddListClear.addEventListener('click', function() {
     addListInput.value ='';
     counter(addListInput.value, textCounterAdd);
+    textCommentAddWrongSymbols.innerHTML = ('Некорректных символов в списке не обнаружено;');
+    textCommentAddWrongSymbols.style.color = '#45a039';
+    textCommentAddDuplicates.innerHTML = ('Дубликатов не обнаружено;<br>');
+    textCommentAddDuplicates.style.color = '#45a039';
+    textCommentAddCompare.innerHTML = ('Совпадений с первоначальным списком не обнаружено;');
+    textCommentAddCompare.style.color = '#45a039';
 });
+
 buttonDelinListClear.addEventListener('click', function() {
     delListInput.value ='';
     counter(delListInput.value, textCounterDel);
+    textCommentDelWrongSymbols.innerHTML = ('Некорректных символов в списке не обнаружено;');
+    textCommentDelWrongSymbols.style.color = '#45a039';
+    textCommentDelDuplicates.innerHTML = ('Дубликатов не обнаружено;<br>');
+    textCommentDelDuplicates.style.color = '#45a039';
+    textCommentDelCompare.innerHTML = ('Совпадений с добавляемым списком не обнаружено;');
+    textCommentDelCompare.style.color = '#45a039';
 });
+
 buttonResultListCrear.addEventListener('click', function() {
     textResult.value ='';
     textCounterResult.innerHTML = ('Кол-во строк: 0');
