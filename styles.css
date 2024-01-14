@@ -1,0 +1,130 @@
+html {
+    font-size: 15px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+body {
+    background-color: #1f1f1f; /* Тёмный фон */
+    color: #eaeaea; /* Цвет текста */
+}
+
+.container-main {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin: 30px 20px;
+}
+
+.container-field {
+    flex: 1;
+    max-width: 100%;
+}
+
+.field {
+    background-color: #333;
+    height: 500px;
+    border: 1px solid #555;
+    text-align: center;
+    position: relative;
+}
+
+.field-symbol {
+    font-size: 30px;
+    user-select: none;
+    margin-top: 250px;
+}
+
+.field textarea {
+    width: calc(100% - 20px); 
+    height: calc(100% - 24px); 
+    padding: 10px;
+    background-color: #333; 
+    color: #fff;
+    border: none;
+    resize: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.field textarea::placeholder {
+    color: #aaaaaa; /* Цвет placeholder */
+}
+
+.field-comments {
+    background-color: #333;
+    border-top: 1px solid #555;
+    padding: 10px 15px;
+}
+
+.field-comments p {
+    color: #45a039;
+}
+
+.field-result {
+    user-select: none;
+}
+
+.result-button {
+    font-size: 30px;
+    background-color: #4CAF50; 
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.result-button:hover {
+    background-color: #45a039;
+}
+
+.field-button {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #333;
+    text-align: center;
+}
+
+.field-button p {
+    margin: auto;
+    color: #b8b8b8;
+    font-size: 13px;
+}
+
+.button-clear {
+    width: 90px;
+    background-color: #1f1f1f;
+    color: #b8b8b8;
+    cursor: pointer;
+    padding: 5px 1px;
+    font-size: 13px;
+}
+
+.button-clear:hover {
+    background-color: #333333;
+}
+
+.text-result {
+    text-align: left;
+    margin-left: 15px;
+}
