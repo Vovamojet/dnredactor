@@ -38,6 +38,7 @@ body {
 .container-title {
     text-align: left;
     margin-bottom: 5px;
+    user-select: none;
 }
 
 .container-field {
