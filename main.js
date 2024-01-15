@@ -81,7 +81,7 @@ function createNewList() {
     const arrayWithAdded = originArray.concat(addArray);
     const resultArray = arrayWithAdded.filter(item => !delArray.includes(item));
 
-    const newList = resultArray.sort((a, b) => a - b).join('\n'); // сравнение типа число
+    const newList = resultArray.sort((a, b) => a - b).join('\n');
     textResult.value = newList;
     counter(newList, textCounterResult);
 }
