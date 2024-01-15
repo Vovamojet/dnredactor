@@ -115,7 +115,7 @@ body {
 
 .button-clear {
     width: 90px;
-    background-color: #1f1f1f;
+    background-color: #434343;
     color: #b8b8b8;
     cursor: pointer;
     padding: 5px 1px;
@@ -133,18 +133,18 @@ body {
 
 .button-replace {
     width: 140px;
-    background-color: #333;
+    background-color: #434343;
     color: #b8b8b8;
     cursor: pointer;
     padding: 8px 12px;
     font-size: 14px;
-    border: none;
+    /* border: none; */
     border-radius: 5px;
     margin-top: 15px;
 }
 
 .button-replace:hover {
-    background-color: #444;
+    background-color: #333333;
 }
 
 
