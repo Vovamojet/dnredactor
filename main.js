@@ -91,20 +91,29 @@ function compareOrignWithAdd() {
     const originArray = (originListInput.value).split('\n');
     const addArray = (addListInput.value).split('\n');
 
-    if (originArray.length === 0 || addArray.length === 0) {
-        return;
-    }
+    if (originListInput.value && addListInput.value) {
+        if (originArray.length === 0 || addArray.length === 0) {
+            return;
+        }
+    
+        const duplicates = originArray.filter(item => addArray.includes(item));
+    
+        if (duplicates.length > 0) {
+            textCommentAddCompare.innerHTML = ('Обнаружены совпадения с начальным списком: ' + duplicates + ';');
+            textCommentAddCompare.style.color = 'red';
+        } else {
+            textCommentAddCompare.innerHTML = ('Совпадений с первоначальным списком не обнаружено;');
+            textCommentAddCompare.style.color = '#45a039';
+        }
 
-    // Фильтруем массивы, чтобы получить только повторяющиеся элементы
-    const duplicates = originArray.filter(item => addArray.includes(item));
 
-    if (duplicates.length > 0) {
-        textCommentAddCompare.innerHTML = ('Обнаружены совпадения с начальным списком: ' + duplicates + ';');
-        textCommentAddCompare.style.color = 'red';
     } else {
         textCommentAddCompare.innerHTML = ('Совпадений с первоначальным списком не обнаружено;');
         textCommentAddCompare.style.color = '#45a039';
     }
+
+
+
 }
 
 function compareDelWithAdd() {

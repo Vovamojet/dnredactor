@@ -80,6 +80,7 @@ body {
 
 .field-comments p {
     color: #45a039;
+    user-select: none;
 }
 
 .field-result {
