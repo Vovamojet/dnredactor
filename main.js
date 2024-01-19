@@ -40,7 +40,7 @@ function listHasIncorrectSymbols(list, field) {
         field.innerHTML = ("В списке обнаружены некорректные символы: " + incorrectSymbolsArray.join(', '));
         field.style.color = 'red';
     } else {
-        field.innerHTML = ('Некорректных символов в списке не обнаружено;');
+        field.innerHTML = ('Некорректных символов не обнаружено;');
         field.style.color = '#45a039';
     };
 };
@@ -102,13 +102,13 @@ function compareOrignWithAdd() {
             textCommentAddCompare.innerHTML = ('Обнаружены совпадения с начальным списком: ' + duplicates + ';');
             textCommentAddCompare.style.color = 'red';
         } else {
-            textCommentAddCompare.innerHTML = ('Совпадений с первоначальным списком не обнаружено;');
+            textCommentAddCompare.innerHTML = ('Совпадений с начальным списком не обнаружено;');
             textCommentAddCompare.style.color = '#45a039';
         }
 
 
     } else {
-        textCommentAddCompare.innerHTML = ('Совпадений с первоначальным списком не обнаружено;');
+        textCommentAddCompare.innerHTML = ('Совпадений с начальным списком не обнаружено;');
         textCommentAddCompare.style.color = '#45a039';
     }
 
@@ -157,7 +157,7 @@ originListInput.addEventListener('input', function() {
     if (originListInput.value && addListInput.value) {
         compareOrignWithAdd();
     } else {
-        textCommentAddCompare.innerHTML = ('Совпадений с первоначальным списком не обнаружено;');
+        textCommentAddCompare.innerHTML = ('Совпадений с начальным списком не обнаружено;');
         textCommentAddCompare.style.color = '#45a039';
     }
 });
@@ -170,7 +170,7 @@ addListInput.addEventListener('input', function() {
     if (originListInput.value && addListInput.value) {
         compareOrignWithAdd();
     } else {
-        textCommentAddCompare.innerHTML = ('Совпадений с первоначальным списком не обнаружено;');
+        textCommentAddCompare.innerHTML = ('Совпадений с начальным списком не обнаружено;');
         textCommentAddCompare.style.color = '#45a039';
     }
 });
@@ -193,7 +193,7 @@ resultButton.addEventListener('click', createNewList);
 buttonOriginListClear.addEventListener('click', function() {
     originListInput.value ='';
     counter(originListInput.value, textCounterOrigin);
-    textCommentOriginWrongSymbols.innerHTML = ('Некорректных символов в списке не обнаружено;');
+    textCommentOriginWrongSymbols.innerHTML = ('Некорректных символов не обнаружено;');
     textCommentOriginWrongSymbols.style.color = '#45a039';
     textCommentOriginDuplicates.innerHTML = ('Дубликатов не обнаружено;<br>');
     textCommentOriginDuplicates.style.color = '#45a039';
@@ -202,18 +202,18 @@ buttonOriginListClear.addEventListener('click', function() {
 buttonAddListClear.addEventListener('click', function() {
     addListInput.value ='';
     counter(addListInput.value, textCounterAdd);
-    textCommentAddWrongSymbols.innerHTML = ('Некорректных символов в списке не обнаружено;');
+    textCommentAddWrongSymbols.innerHTML = ('Некорректных символов не обнаружено;');
     textCommentAddWrongSymbols.style.color = '#45a039';
     textCommentAddDuplicates.innerHTML = ('Дубликатов не обнаружено;<br>');
     textCommentAddDuplicates.style.color = '#45a039';
-    textCommentAddCompare.innerHTML = ('Совпадений с первоначальным списком не обнаружено;');
+    textCommentAddCompare.innerHTML = ('Совпадений с начальным списком не обнаружено;');
     textCommentAddCompare.style.color = '#45a039';
 });
 
 buttonDelinListClear.addEventListener('click', function() {
     delListInput.value ='';
     counter(delListInput.value, textCounterDel);
-    textCommentDelWrongSymbols.innerHTML = ('Некорректных символов в списке не обнаружено;');
+    textCommentDelWrongSymbols.innerHTML = ('Некорректных символов не обнаружено;');
     textCommentDelWrongSymbols.style.color = '#45a039';
     textCommentDelDuplicates.innerHTML = ('Дубликатов не обнаружено;<br>');
     textCommentDelDuplicates.style.color = '#45a039';
